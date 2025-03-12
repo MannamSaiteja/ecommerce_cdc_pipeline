@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "OrderEvent",
+  "namespace": "ecommerce.orders",
+  "fields": [
+    { "name": "order_id", "type": "int" },  
+    { "name": "customer_id", "type": "int" },  
+    { "name": "product_id", "type": "int" },  
+    { "name": "status", "type": { "type": "enum", "name": "OrderStatus", "symbols": ["Pending", "Shipped", "Delivered", "Cancelled"] }},
+    { "name": "order_date", "type": "string" },  
+    { "name": "operation", "type": { "type": "enum", "name": "OperationType", "symbols": ["CREATE", "UPDATE", "DELETE"] }}
+  ]
+}
